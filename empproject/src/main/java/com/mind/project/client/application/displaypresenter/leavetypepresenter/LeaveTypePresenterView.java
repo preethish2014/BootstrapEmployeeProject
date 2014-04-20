@@ -24,7 +24,7 @@ import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 import com.mind.project.client.application.displaypresenter.DisplayPresenterPresenter;
 import com.mind.project.shared.model.Employee;
 import com.mind.project.shared.model.EmployeeDB;
-import com.mind.project.shared.model.LeaveDB;
+import com.mind.project.shared.model.LeaveTypeDB;
 
 public class LeaveTypePresenterView extends
 		ViewWithUiHandlers<LeaveTypePresenterUiHandlers> implements

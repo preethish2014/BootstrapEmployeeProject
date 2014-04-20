@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <g:SimplePanel ui:field="main"/>
+    <g:HTMLPanel>
+		<h1>Apply Leave System</h1>
+		<hr />
+       <g:Label> Employee Id</g:Label>
+		<g:Label text="Enter the emp id" />
+
+		<g:TextBox ui:field="empId"></g:TextBox>
+		<g:Label>Choose LeaveType</g:Label>
+		<g:ListBox ui:field="assignedLeaveTypes" multipleSelect="false"
+						title="Assigned leavetype" width="150px">
+					</g:ListBox>
+  
+		<g:Label>Enter the Leave description</g:Label>
+		<g:TextBox ui:field="leaveDesc"></g:TextBox>
+		<g:Label>Enter the Start_date of Leave</g:Label>
+		<g:TextBox ui:field="start_date"></g:TextBox>
+		<g:Label>Enter the End_date of Leave</g:Label>
+		<g:TextBox ui:field="end_date"></g:TextBox>
+         <g:Label>Status</g:Label>
+		<g:TextBox ui:field="status"></g:TextBox>
+		<g:Button ui:field="applyButton">Apply</g:Button>
+    </g:HTMLPanel>
+</ui:UiBinder>

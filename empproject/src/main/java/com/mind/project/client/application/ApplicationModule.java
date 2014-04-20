@@ -20,11 +20,17 @@ import com.mind.project.client.application.home.HomeModule;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.mind.project.client.application.displaypresenter.DisplayPresenterModule;
 import com.mind.project.client.application.editdetails.EditDetailsModule;
+import com.mind.project.client.application.applyLeave.applyleave.ApplyLeaveModule;
+
+
 
 public class ApplicationModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
-        install(new EditDetailsModule());
+     
+		
+		install(new ApplyLeaveModule());
+		install(new EditDetailsModule());
 		install(new DisplayPresenterModule());
 		install(new HomeModule());
 

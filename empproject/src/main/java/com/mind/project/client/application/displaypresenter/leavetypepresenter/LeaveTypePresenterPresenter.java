@@ -23,7 +23,7 @@ import com.gwtplatform.mvp.client.annotations.ProxyCodeSplit;
 import com.mind.project.client.application.displaypresenter.DisplayPresenterPresenter;
 import com.mind.project.client.place.NameTokens;
 import com.mind.project.shared.model.Employee;
-import com.mind.project.shared.model.LeaveDB;
+import com.mind.project.shared.model.LeaveTypeDB;
 
 public class LeaveTypePresenterPresenter
 		extends
@@ -79,7 +79,7 @@ public class LeaveTypePresenterPresenter
 	}
 
 	@Inject
-	LeaveDB leaveDB;
+	LeaveTypeDB leaveDB;
 
 	@Override
 	protected void onReset() {

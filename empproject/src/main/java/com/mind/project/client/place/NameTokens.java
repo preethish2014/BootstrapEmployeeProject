@@ -18,7 +18,7 @@ package com.mind.project.client.place;
 
 public class NameTokens {
 
-	public static final String manager = "manager";
+	public static final String applyLeave = "applyLeave";
 
 	public static final String leavetype = "leavetype";
 
@@ -68,8 +68,8 @@ public class NameTokens {
 		return leavetype;
 	}
 
-	public static String getManager() {
-		return manager;
+	public static String getApplyLeave() {
+		return applyLeave;
 	}
 
 }
