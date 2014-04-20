@@ -1,0 +1,24 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<g:HTMLPanel>
+		<h1>ADD the Employee Details</h1>
+		<hr />
+
+		<g:Label text="Enter the emp id" />
+
+		<g:TextBox ui:field="empId"></g:TextBox>
+		<g:Label>Enter the Employee Age</g:Label>
+		<g:TextBox ui:field="empAge"></g:TextBox>
+		<g:Label>Enter the Employee Nme</g:Label>
+		<g:TextBox ui:field="empName"></g:TextBox>
+		<g:Label>Enter the Employee Address</g:Label>
+		<g:TextBox ui:field="address"></g:TextBox>
+		<g:Label>Enter the EmployeePhoneno</g:Label>
+		<g:TextBox ui:field="phoneNo"></g:TextBox>
+
+		<g:Button ui:field="addButton">Add Employee </g:Button>
+		<g:Hyperlink ui:field="clikme" targetHistoryToken="home">WellcomePage
+		</g:Hyperlink>
+
+	</g:HTMLPanel>
+</ui:UiBinder>

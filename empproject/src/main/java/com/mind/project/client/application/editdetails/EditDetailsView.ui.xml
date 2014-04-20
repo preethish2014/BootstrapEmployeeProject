@@ -1,0 +1,24 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+   
+   <g:HTMLPanel>
+		<h1>EDIT the Employee Details</h1>
+		<hr />
+
+	<g:Label >Employee Id</g:Label >
+    <g:Label ui:field="id"></g:Label >
+    <g:Label>Employee Age</g:Label>
+    <g:TextBox ui:field="age"> </g:TextBox>
+    <g:Label>Employee Name</g:Label>
+    <g:TextBox ui:field="name"> </g:TextBox>
+    <g:Label>Employee Address</g:Label>
+    <g:TextBox ui:field="address"> </g:TextBox>
+    <g:Label>Employee Phno</g:Label>
+    <g:TextBox ui:field="phNo"> </g:TextBox>
+    <g:Button ui:field="button">Save</g:Button>
+    
+	<g:Hyperlink  targetHistoryToken="displaypresenter">PreviousPage
+		</g:Hyperlink>
+   </g:HTMLPanel>
+</ui:UiBinder>
