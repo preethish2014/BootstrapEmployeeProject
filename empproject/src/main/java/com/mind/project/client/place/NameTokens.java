@@ -18,6 +18,8 @@ package com.mind.project.client.place;
 
 public class NameTokens {
 
+	public static final String manager = "manager";
+
 	public static final String leavetype = "leavetype";
 
 	public static final String editdetails = "editdetails";
@@ -64,6 +66,10 @@ public class NameTokens {
 
 	public static String getLeavetype() {
 		return leavetype;
+	}
+
+	public static String getManager() {
+		return manager;
 	}
 
 }
