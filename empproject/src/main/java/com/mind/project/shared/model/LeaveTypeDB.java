@@ -2,6 +2,7 @@ package com.mind.project.shared.model;
 
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -24,14 +25,18 @@ public class LeaveTypeDB {
 	public int getMapCount(){
 		return leaves.size();
 	}
+
+
 	
 	public List<String> searchLeavesByEmpId(Integer emp_id) 
 	{
 		for (Map.Entry<Integer,List<String>> entry : leaves.entrySet()) {
 			
-			if(leaves.containsKey(emp_id))
+		      if(emp_id==entry.getKey())
+			/*if(leaves.containsKey(emp_id))*/
 			{
-				List<String> assignedLeaves = entry.getValue();
+				  
+				List<String> assignedLeaves =entry.getValue();
 				return assignedLeaves;
 				
 			}

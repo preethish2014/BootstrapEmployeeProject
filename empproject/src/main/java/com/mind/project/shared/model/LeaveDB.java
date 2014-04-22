@@ -1,49 +1,40 @@
 package com.mind.project.shared.model;
 
-
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
-import javax.inject.Singleton;
+public class LeaveDB implements LeaveApplication {
 
-
-
-@Singleton
-public class LeaveDB {
-
-	// Stores the Database of the leave
-	public Map<Integer,List<String> > leaves = new HashMap<Integer,List<String> >();
-
-	public void addLeaveDetailsToDb(Integer emp_id, List<String> leavelist) 
-	{
-		leaves.put(emp_id, leavelist);
-		
-		
-	}
-	public int getMapCount(){
-		return leaves.size();
-	}
 	
-	public List<String> searchLeavesByEmpId(Integer emp_id) 
+	
+	public List<Leave> leaveDB=new ArrayList<Leave>();
+	
+	
+	public void addApplyLeave(Leave leave)
 	{
-		for (Map.Entry<Integer,List<String>> entry : leaves.entrySet()) {
-			
-			if(leaves.containsKey(emp_id))
-			{
-				List<String> assignedLeaves = entry.getValue();
-				return assignedLeaves;
-				
-			}
+		leaveDB.add(leave);
+	}
+	public int getApplyListCount() 
+	{
+		return leaveDB.size();
+	}
+	public Leave searchApplyLeaveDetails(int id,String leaveType) {
 
-			System.out.println("\n Employee id is  : " + entry.getKey()
-					+ "\t LeaveTypes Asssigned to the emp are :   " + entry.getValue());
+		Iterator<Leave> it = leaveDB.iterator();
+		while (it.hasNext()) {
+			Leave leaveapplylist = it.next();
+			if (id == leaveapplylist.getEmp_id())
+				if(leaveType.equals(leaveapplylist.getLeaveType()))
+			{
+				return leaveapplylist;
+			}
 		}
 		return null;
-		
+	}
+	@Override
+	public void addApproveLeave(Leave leave) {
+		// TODO Auto-generated method stub
 		
 	}
-
-	
-
 }
