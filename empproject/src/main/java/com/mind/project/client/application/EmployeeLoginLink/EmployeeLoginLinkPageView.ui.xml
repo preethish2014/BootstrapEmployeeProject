@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <g:SimplePanel ui:field="main">
+    <g:HTMLPanel>
+		<h1>Employee authenticated Links</h1>
+		
+		<g:Hyperlink ui:field="home1" targetHistoryToken="home">Employee Register</g:Hyperlink>
+<g:Hyperlink ui:field="applyLeave" targetHistoryToken="applyLeave">Leave Apply</g:Hyperlink>
+	</g:HTMLPanel>
+    </g:SimplePanel>
+</ui:UiBinder>
