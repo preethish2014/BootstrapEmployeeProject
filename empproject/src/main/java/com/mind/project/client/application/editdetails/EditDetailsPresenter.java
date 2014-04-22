@@ -35,6 +35,7 @@ public class EditDetailsPresenter extends
 
 		TextBox getAddress();
 		TextBox getPhno();
+		TextBox getPassword() ;
 
 		public void editviewEmployeeDetails(Employee employee);
 	}
@@ -76,7 +77,7 @@ public class EditDetailsPresenter extends
 	public void getEmpValues(int id1) {
 		empdb.deleteEmpByID(id1);
 		Employee empObj=new Employee(Integer.parseInt(getView().getId().getText()),Integer.parseInt(getView().getAge().getText()),
-				           getView().getName().getText(),getView().getAddress().getText(),Long.parseLong(getView().getPhno().getText()));
+				           getView().getName().getText(),getView().getAddress().getText(),Long.parseLong(getView().getPhno().getText()),getView().getPassword().getText());
 				   
 				//call to the addEmployee Method and pass the object of employee 
 				empdb.addEmployee(empObj);

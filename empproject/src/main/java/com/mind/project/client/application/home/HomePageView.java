@@ -19,6 +19,8 @@ package com.mind.project.client.application.home;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.Hyperlink;
+import com.google.gwt.user.client.ui.PasswordTextBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
@@ -48,6 +50,14 @@ public class HomePageView extends ViewImpl implements HomePagePresenter.MyView {
     TextBox phoneNo;
 	@UiField
 	Button addButton;
+	@UiField
+	PasswordTextBox password;
+	@UiField
+	Hyperlink clikme;
+	
+	public PasswordTextBox getPassword() {
+		return password;
+	}
 	@Override
 	public Button getAddButton() {
 		

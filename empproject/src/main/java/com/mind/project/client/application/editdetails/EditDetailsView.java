@@ -38,6 +38,12 @@ public class EditDetailsView extends ViewWithUiHandlers<EditDetailsUiHandlers>
 	@UiField
 	TextBox phNo;
 	@UiField
+	TextBox password;
+	public TextBox getPassword() {
+		return password;
+	}
+
+	@UiField
 	Button button;
 
 	@Override

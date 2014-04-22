@@ -16,6 +16,8 @@
     <g:TextBox ui:field="address"> </g:TextBox>
     <g:Label>Employee Phno</g:Label>
     <g:TextBox ui:field="phNo"> </g:TextBox>
+    <g:Label>Password</g:Label>
+    <g:TextBox ui:field="password"> </g:TextBox>
     <g:Button ui:field="button">Save</g:Button>
     
 	<g:Hyperlink  targetHistoryToken="displaypresenter">PreviousPage

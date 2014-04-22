@@ -27,8 +27,21 @@ public class NameTokens {
 	public static final String showalldetails = "showalldetails";
 
 	public static final String displaypresenter = "displaypresenter";
+	
+	public static final String managerlinkpresenter ="managerlinkpresenter";
+	
+	public static final String testpresenter ="testpresenter";
+	public static final String linkpresenter ="linkpresenter";
 
 	//public static final String display = "display";
+
+	public static String getTestpresenter() {
+		return testpresenter;
+	}
+
+	public static String getManagerlinkpresenter() {
+		return managerlinkpresenter;
+	}
 
 	public static final String wellcomepresenter = "wellcomepresenter";
 

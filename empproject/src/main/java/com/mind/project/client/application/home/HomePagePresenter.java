@@ -25,6 +25,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.PasswordTextBox;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
@@ -35,6 +36,7 @@ import com.gwtplatform.mvp.client.annotations.ProxyStandard;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
+import com.mind.project.shared.model.ManagerDB;
 
 public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy> {
     public interface MyView extends View
@@ -47,7 +49,7 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
         public TextBox getAddressTextBox();
         public TextBox getPhoneNoTextBox();
        
-    
+       public PasswordTextBox getPassword();
     
     
     
@@ -68,6 +70,8 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     PlaceManager placemanager;
     @Inject
     EmployeeDB empdb;
+    @Inject
+    ManagerDB managerDB;
     
     
    /* @Override
@@ -90,9 +94,10 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
 				Employee employee1 = new Employee(Integer.parseInt(getView().getEmpIdTextBox().getText()),Integer.parseInt(getView().getEmpAgeTextBox().getText())
 						                ,getView().getEmpNameTextBox().getText()
 						                ,getView().getAddressTextBox().getText(),
-						                Long.parseLong(getView().getPhoneNoTextBox().getText()));
+						                Long.parseLong(getView().getPhoneNoTextBox().getText()),getView().getPassword().getText());
 				
 				empdb.addEmployee(employee1);
+			
 				Window.alert("The Employee Named\t "+employee1.getName()+"\tis successfully added to the database");
 				
 				
