@@ -34,7 +34,7 @@ public class EmployeeDB {
 	public void addEmployee(Employee emp) {
 		person.add(emp);
 		
-		managerDB.addReportees(121, person);
+		
 	}
 
 	// function to return the no of emp in the list

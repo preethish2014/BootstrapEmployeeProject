@@ -32,8 +32,13 @@ public class NameTokens {
 	
 	public static final String testpresenter ="testpresenter";
 	public static final String linkpresenter ="linkpresenter";
+	public static final String manager ="manager";
 
 	//public static final String display = "display";
+
+	public static String getManager() {
+		return manager;
+	}
 
 	public static String getTestpresenter() {
 		return testpresenter;

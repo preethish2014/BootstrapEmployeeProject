@@ -9,13 +9,13 @@ import com.mind.project.shared.model.Employee;
 
 public class ManagerDB {
 	
-	public  static Map<Integer,List<Employee> > mgr = new HashMap<Integer,List<Employee> >();
+	public  static Map<Integer,List<Integer> > mgr = new HashMap<Integer,List<Integer> >();
 //	public ArrayList<Employee> manager=new ArrayList<Employee>();
 	
 	
-	public void addReportees(Integer mgr_id, List<Employee> list)
+	public void addReportees(Integer mgr_id, List<Integer> emplist)
 	{
-		mgr.put(mgr_id, list);
+		mgr.put(mgr_id, emplist);
 		
 	}
 	
