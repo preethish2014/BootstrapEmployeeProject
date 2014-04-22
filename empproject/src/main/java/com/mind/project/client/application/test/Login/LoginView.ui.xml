@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <g:SimplePanel ui:field="main">
+    <g:HTMLPanel>
+   <h1>Welcome To Login Page</h1>
+		<hr />
+
+		<g:Label text="User Id" />
+
+		<g:TextBox ui:field="empId"></g:TextBox>
+		
+		<g:Label text="Password" />
+		
+		<g:PasswordTextBox ui:field="password"></g:PasswordTextBox>
+
+		<g:Button ui:field="addButton">Login</g:Button>
+		
+		<g:Hyperlink ui:field="register" targetHistoryToken="home">Register</g:Hyperlink>
+    </g:HTMLPanel>
+    </g:SimplePanel>
+</ui:UiBinder>
