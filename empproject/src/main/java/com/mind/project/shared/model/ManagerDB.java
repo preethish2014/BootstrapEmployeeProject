@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.mind.project.shared.model.Employee;
-
+import javax.inject.Singleton;
+@Singleton
 public class ManagerDB {
 	
 	public  static Map<Integer,List<Integer> > mgr = new HashMap<Integer,List<Integer> >();
@@ -25,6 +26,9 @@ public class ManagerDB {
     	return mgr.size();
     }
 
+    
+    
+    
 	public boolean searchManageRUserName(Integer UserId) {
 		
 if(mgr.containsKey(UserId))
@@ -59,6 +63,37 @@ else
 		System.out.println("Manager database");
 		
 	}*/
+	
+	//REturn the whole list of reportees
+	public Map<Integer,List<Integer>> getAllReportees() {
+		
+		return mgr;
+	}
+	public ManagerDB searchEmpDataById(Integer manager_id) {
+		
+		return null;
+	}
+	
+	public List<Integer> searchManagerDB(Integer mgr_id) 
+	{
+		for (Map.Entry<Integer,List<Integer>> entry : mgr.entrySet()) {
+			
+			if(mgr.containsKey(mgr_id))
+			{
+				List<Integer> empUnderMgr = entry.getValue();
+				return empUnderMgr;
+				
+			}
+
+			
+		}
+		return null;
+		
+		
+	}
+	
+	
+	
 	
 
 }

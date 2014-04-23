@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+   <g:HTMLPanel >
+    
+  	
+  	<g:FlexTable  ui:field="leaveApprovalTable" title="Employee Table"  cellSpacing="1" cellPadding="1"  borderWidth="2" width="25px">
+  	
+  	</g:FlexTable>
+  <g:Hidden ui:field="managerId"></g:Hidden>
+  	
+  	<g:Hyperlink ui:field="clikme" targetHistoryToken="home">WellcomePage
+		</g:Hyperlink>
+		
+	
+	
+    
+    </g:HTMLPanel>
+</ui:UiBinder>
