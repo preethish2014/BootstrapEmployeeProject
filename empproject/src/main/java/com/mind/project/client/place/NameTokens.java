@@ -32,6 +32,10 @@ public class NameTokens {
 	
 	public static final String testpresenter ="testpresenter";
 	public static final String linkpresenter ="linkpresenter";
+	public static String getLinkpresenter() {
+		return linkpresenter;
+	}
+
 	public static final String manager ="manager";
 
 	//public static final String display = "display";
@@ -57,10 +61,16 @@ public class NameTokens {
 	public static String getHome() {
 		return home;
 	}
+	
+	public static final String leaveapproval ="leaveapproval";
 
 	/*public static String getFirstpresenter() {
 		return firstpresenter;
 	}*/
+
+	public static String getLeaveapproval() {
+		return leaveapproval;
+	}
 
 	public static String getWellcomepresenter() {
 		return wellcomepresenter;

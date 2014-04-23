@@ -19,8 +19,15 @@ package com.mind.project.client.application;
 import com.mind.project.client.application.home.HomeModule;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.mind.project.client.application.displaypresenter.DisplayPresenterModule;
+import com.mind.project.client.application.displaypresenter.leaveapproval.LeaveApprovalModule;
 import com.mind.project.client.application.editdetails.EditDetailsModule;
+import com.mind.project.client.application.editdetails.manager.ManagerModule;
+import com.mind.project.client.application.EmployeeLoginLink.EmployeeLoginLinkPageModule;
 import com.mind.project.client.application.applyLeave.applyleave.ApplyLeaveModule;
+import com.mind.project.client.application.test.Login.LoginModule;
+import com.mind.project.client.application.managerLink.managerlink.ManagerLinkModule;
+
+
 
 
 
@@ -29,6 +36,13 @@ public class ApplicationModule extends AbstractPresenterModule {
     protected void configure() {
      
 		
+		
+    	install(new ManagerModule());
+    	install(new LeaveApprovalModule());
+		install(new ManagerLinkModule());
+		install(new EmployeeLoginLinkPageModule());
+		install(new LoginModule());
+
 		install(new ApplyLeaveModule());
 		install(new EditDetailsModule());
 		install(new DisplayPresenterModule());
