@@ -29,9 +29,9 @@ public class ManagerDB {
     
     
     
-	public boolean searchManageRUserName(Integer UserId) {
+	public boolean searchManageRUserId(Employee employee) {
 		
-if(mgr.containsKey(UserId))
+if(mgr.size()>0 && mgr.containsKey(employee.getEmp_id()) )
 {
 	return true;
 }
@@ -43,7 +43,7 @@ else
 		
 	}
   
-
+	//if(mgr.containsKey(employee.getEmp_id()))
 	/*public boolean searchManagerIdAndPassword(Employee employee) {
 		// TODO Auto-generated method stub
 	if(manager.contains(employee))

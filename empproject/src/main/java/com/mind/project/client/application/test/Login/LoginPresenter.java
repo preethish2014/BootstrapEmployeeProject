@@ -75,13 +75,35 @@ public class LoginPresenter extends
 				
 				
 				
-
+				//Employee employee = new Employee(Integer.parseInt(UserId1), Password);
 				
 
 				// checks for Manager and permit him to his authenticated page
 				
-				if (UserId.equals("admin")
-						&& Password.equals("adminpassword")) 
+			 if(getView().getEmpId().getText().isEmpty()|| getView().getPassword().getText().isEmpty())
+				{
+					
+				 if(getView().getEmpId().getText().isEmpty() && getView().getPassword().getText().isEmpty()){
+					 
+					 Window.alert("Please Enter ur Username  and Password"); 
+				 }
+					
+				 else	if( getView().getEmpId().getText().isEmpty() )
+					{
+					Window.alert("Please Enter ur Username ");
+				}
+			else if(getView().getPassword().getText().isEmpty())
+					{
+						Window.alert("Please Enter ur Password ");
+					}
+			
+				
+				}
+				
+				
+				
+			 else	if (UserId.equals("admin")
+						&& Password.equals("admin123")) 
 				{
 					PlaceRequest placerequesofwelcomepresenter = new PlaceRequest(
 							NameTokens.wellcomepresenter);
@@ -89,31 +111,46 @@ public class LoginPresenter extends
 					
 				}
 				
+			/* else	if (!Password.contains("abcdefghijklmnopqrstuvwxyz") && UserId.contains("abcdefghijklmnopqrstuvwxyz")) 
+				{
+				 Window.alert("Please Enter Username in Correct format ");
+					
+				}*/
+			 
+			 
 				// parse ( STring - user Name) to Integer 
 				
-				Employee employee = new Employee(Integer.parseInt(UserId), Password);
-
+//				Employee employee = new Employee(Integer.parseInt(UserId1), Password);
 				
-					if (manDB.searchManageRUserName(Integer.parseInt(UserId))
-						
-						&& empdb.searchEmpIdAndPassword(employee)) {
+				
+				else if (!UserId.equals("admin") && manDB.searchManageRUserId(new Employee(Integer.parseInt(UserId), Password)) )
+				{
+					// Employee employee = new Employee(Integer.parseInt(UserId), Password);
+					
+			
 
 					PlaceRequest placerequestofLeaveType = new PlaceRequest(
 							NameTokens.managerlinkpresenter);
 					placemanager.revealPlace(placerequestofLeaveType);
 
 				}
-				// checks for employee and permit him to his authenticated page
-
-				
-				 else if(empdb.searchEmpIdAndPassword(employee)) {
 				 
+				
+				// checks for employee and permit him to his authenticated page
+				else if(!UserId.equals("admin") && empdb.searchEmpIdAndPassword( new Employee(Integer.parseInt(UserId), Password)))
+				{
+					
+				 
+				 			 
+					 
+						
 				 PlaceRequest placerequestofhome = new
 				 PlaceRequest(NameTokens.linkpresenter);
 				 placemanager.revealPlace(placerequestofhome);
 				 
 				  
-				  }
+				  
+				}
 				 
 
 				// checks for Admin and permit him to all pages
@@ -126,10 +163,25 @@ public class LoginPresenter extends
 
 				}*/
 				
+				/*else if(getView().getEmpId().equals("")|| getView().getPassword().equals("") )
+				{
+					
+					Window.alert("Please Enter ur Username ");
+					if(getView().getEmpId().getText().isEmpty())
+					{
+					Window.alert("Please Enter ur Username ");
+				}
+			else if(getView().getPassword().getText().isEmpty())
+					{
+						Window.alert("Please Enter ur Password ");
+					}
+				
+				
+				}*/
 				
 				
 
-				else {
+				else  {
 					Window.alert("Authentication Failure");
 				}
 
@@ -139,6 +191,7 @@ public class LoginPresenter extends
 	}
 
 }
+
 /*
  * if(empdb.searchEmpIdAndPassword(employee)) {
  * 

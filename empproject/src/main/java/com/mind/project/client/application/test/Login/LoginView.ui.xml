@@ -16,7 +16,7 @@
 
 		<g:Button ui:field="addButton">Login</g:Button>
 		
-		<g:Hyperlink ui:field="register" targetHistoryToken="home">Register</g:Hyperlink>
+		<g:Hyperlink ui:field="register" targetHistoryToken="!home">Register</g:Hyperlink>
     </g:HTMLPanel>
     </g:SimplePanel>
 </ui:UiBinder>
